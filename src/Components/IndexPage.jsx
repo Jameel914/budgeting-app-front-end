@@ -28,17 +28,17 @@ function IndexPage() {
             <th>Category</th>
             <th>Amount</th>
           </tr>
-          {amount.map((item) => {
+          {amount.map((item, index) => {
             return (
-              <tr key={item.id}>
+              <tr key={index}>
                 <td>
-                  <Link to={`/transaction/${item.id}`}>{item.date}</Link>
+                  <Link to={`/transaction/${index}`}>{item.date}</Link>
                 </td>
                 <td>
-                  <Link to={`/transaction/${item.id}`}>{item.category}</Link>
+                  <Link to={`/transaction/${index}`}>{item.category}</Link>
                 </td>
                 <td>
-                  <Link to={`/transaction/${item.id}`}>{item.amount}</Link>
+                  <Link to={`/transaction/${index}`}>{item.amount}</Link>
                 </td>
               </tr>
             );
