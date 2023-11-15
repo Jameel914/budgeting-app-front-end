@@ -5,6 +5,7 @@ import ShowPage from "./Components/ShowPage";
 import EditPage from "./Components/EditPage";
 import NewPage from "./Components/NewPage";
 import Home from "./Components/Home";
+import PageNotFound from "./Components/PageNotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/transaction/:id" element={<ShowPage />} />
         <Route path="/transaction/:id/edit" element={<EditPage />} />
         <Route path="/transaction/new" element={<NewPage />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );
