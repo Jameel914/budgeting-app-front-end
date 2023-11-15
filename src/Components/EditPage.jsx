@@ -4,7 +4,7 @@ import axios from "axios";
 
 function EditPage() {
   const API = import.meta.env.VITE_API_URL;
-  const { index } = useParams;
+  const { index } = useParams();
   const navigate = useNavigate();
 
   const [item_name, setItem_Name] = useState("");

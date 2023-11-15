@@ -14,8 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/transaction" element={<IndexPage />} />
-        <Route path="/transaction/:id" element={<ShowPage />} />
-        <Route path="/transaction/:id/edit" element={<EditPage />} />
+        <Route path="/transaction/:index" element={<ShowPage />} />
+        <Route path="/transaction/:index/edit" element={<EditPage />} />
         <Route path="/transaction/new" element={<NewPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

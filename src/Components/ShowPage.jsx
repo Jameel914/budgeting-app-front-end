@@ -6,7 +6,7 @@ function ShowPage() {
   const API = import.meta.env.VITE_API_URL;
   const [single, setSingle] = useState("");
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { index } = useParams();
 
   useEffect(() => {
     fetchShow();
@@ -14,7 +14,7 @@ function ShowPage() {
 
   async function fetchShow() {
     try {
-      let result = await axios.get(`${API}/transaction/${id}`);
+      let result = await axios.get(`${API}/transaction/${index}`);
       console.log(result.data);
       setSingle(result.data);
     } catch (error) {
@@ -27,12 +27,12 @@ function ShowPage() {
   }
 
   function handleEditButton() {
-    navigate(`/transaction/${id}/edit`);
+    navigate(`/transaction/${index}/edit`);
   }
 
   async function handleDeleteButton() {
     try {
-      await axios.delete(`${API}/transaction/${id}`);
+      await axios.delete(`${API}/transaction/${index}`);
       navigate(`/transaction`);
     } catch (error) {
       console.log(error);
