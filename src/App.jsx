@@ -4,12 +4,14 @@ import IndexPage from "./Components/IndexPage";
 import ShowPage from "./Components/ShowPage";
 import EditPage from "./Components/EditPage";
 import NewPage from "./Components/NewPage";
+import Home from "./Components/Home";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/transaction" element={<IndexPage />} />
         <Route path="/transaction/:id" element={<ShowPage />} />
         <Route path="/transaction/:id/edit" element={<EditPage />} />
